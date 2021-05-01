@@ -1,0 +1,23 @@
+ion-item{
+  --background: #3880ff;
+  --color: #fff;
+}
+
+ion-button{
+  --background: #062f77;
+}
+
+.ripple-parent {
+  position: relative;
+  overflow: hidden;
+}
+
+#container {
+  text-align: center;
+
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
