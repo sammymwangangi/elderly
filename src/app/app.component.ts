@@ -27,15 +27,46 @@ export class AppComponent {
     });
   }
 
-    // eslint-disable-next-line @angular-eslint/use-lifecycle-interface
-    ngAfterViewInit() {
-        this.alanBtnComponent.nativeElement.addEventListener('command', (data) => {
-            // eslint-disable-next-line @typescript-eslint/consistent-type-assertions
-            const commandData = (<CustomEvent>data).detail;
+  // eslint-disable-next-line @angular-eslint/use-lifecycle-interface
+  ngAfterViewInit() {
+      this.alanBtnComponent.nativeElement.addEventListener('command', (data) => {
+          // eslint-disable-next-line @typescript-eslint/consistent-type-assertions
+          const commandData = (<CustomEvent>data).detail;
 
-            if (commandData.command === 'navigation') {
-                this.navCtrl.navigateForward([`/tabs/tab${commandData.tabNumber}`]);
-            }
-        });
-    }
+          //Book Cabs
+
+          if (commandData.command === 'openUber') {
+            //
+          }
+          if (commandData.command === 'routeCabs') {
+            //
+          }
+          if (commandData.command === 'displayCabs') {
+            //
+          }
+          if (commandData.command === 'cheapCab') {
+            //
+          }
+          if (commandData.command === 'bookCab') {
+            //
+          }
+
+          //Book Hospital Appointment
+
+          if (commandData.command === 'displayHospitals') {
+            //
+          }
+          if (commandData.command === 'emptySlot') {
+            //
+          }
+          if (commandData.command === 'bookAppointment') {
+            //
+          }
+
+          if (commandData.command === 'navigation') {
+              this.navCtrl.navigateForward([`/tabs/tab${commandData.tabNumber}`]);
+          }
+      });
+  }
 }
+

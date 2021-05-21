@@ -1,0 +1,89 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>register</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="container mx-auto mt-8 mb-6">
+    <div class="flex flex-wrap items-center justify-center">
+      <div class="w-full max-w-sm">
+        <div class="flex flex-col break-words">
+
+          <form class="w-full p-6" method="POST" action="#">
+              <div class="flex flex-wrap mb-6">
+                <label for="name" class="block text-white text-sm font-bold mb-2">
+                    Name:
+                </label>
+
+                <input id="name" type="text" class="form-input w-full rounded-lg text-sm text-gray-800 focus:text-gray-900 focus:bg-black active:bg-black" name="name" placeholder="Full Name* (As it appears on your ID)" ngModel required autofocus>
+              </div>
+              <div class="flex flex-wrap mb-6">
+                  <label for="email" class="block text-white text-sm font-bold mb-2">
+                      E-Mail Address:
+                  </label>
+
+                  <input id="email" type="email" class="form-input w-full rounded-lg text-sm text-gray-800 focus:text-gray-900 focus:bg-black active:bg-black" name="email" placeholder="Enter your email address" required autocomplete="email" autofocus>
+              </div>
+
+              <div class="flex flex-wrap mb-6">
+                  <label for="password" class="block text-white text-sm font-bold mb-2">
+                      Password:
+                  </label>
+
+                  <input id="password" type="password" class="form-input w-full rounded-lg text-sm text-gray-800 focus:text-gray-900 focus:bg-black active:bg-black" name="password" required>
+              </div>
+              
+              <div class="flex flex-wrap mb-6">
+                <label for="confirm_password" class="block text-white text-sm font-bold mb-2">
+                    Confirm Password:
+                </label>
+
+                <input id="confirm_password" type="password" class="form-input w-full rounded-lg text-sm text-gray-800 focus:text-gray-900 focus:bg-black active:bg-black" name="confirm_password" required>
+              </div>
+              
+              <div class="flex flex-wrap mb-6">
+                <label for="phone" class="block text-white text-sm font-bold mb-2">
+                    Phone Number:
+                </label>
+
+                <input id="phone" type="number" class="form-input w-full rounded-lg text-sm text-gray-800 focus:text-gray-900 focus:bg-black active:bg-black" name="phone" placeholder="Enter Phone Number" required>
+              </div>
+
+              
+              <div class="flex flex-wrap mb-6">
+                <label for="dob" class="block text-white text-sm font-bold mb-2">
+                    Date of Birth:
+                </label>
+
+                <input id="dob" type="date" class="form-input w-full rounded-lg text-sm text-gray-800 focus:text-gray-900 focus:bg-black active:bg-black" name="dob" placeholder="Enter date of birth" required>
+              </div>
+
+              <div class="flex mb-6">
+                  <label class="inline-flex items-center text-sm text-white" for="remember">
+                      <input type="checkbox" name="remember" id="remember" class="form-checkbox rounded-full">
+                      <span class="ml-2">Remember Me</span>
+                  </label>
+              </div>
+
+              <div class="flex flex-wrap items-center">
+                  <button type="button" [routerLink]="['/profile']" class="bg-blue-500 hover:bg-blue-700 text-gray-100 font-bold py-2 px-4 rounded focus:outline-none focus:ring">
+                      Register
+                  </button>
+                  <p class="w-full text-xs text-center text-white mt-8 -mb-4">
+                      Already have an account?
+                      <button class="text-blue-500 hover:text-blue-700 no-underline" [routerLink]="['/login']">
+                          Login
+                      </button>
+                  </p>
+              </div>
+          </form>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</ion-content>
